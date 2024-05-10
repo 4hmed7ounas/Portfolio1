@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Oswald:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>𝔄𝔥𝔪𝔢𝔡 𝔜𝔬𝔲𝔫𝔞𝔰 - Web Developer - Circuit Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #161922;
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #334B35;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: -1px 0 10px #f1f1f1;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 8px 8px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .container-1 {
+            background-image: url("MainWalll.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            background-color: rgba(22, 25, 34, 0.8);
+            color: white;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            backdrop-filter: blur(50px);
+            padding: 10px 0;
+        }
+
+        .content a {
+            padding: 0px 10px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .content ul li {
+            list-style: none;
+        }
+
+        .portfolio {
+            margin-top: 3em;
+        }
+
+        .portfolio span {
+            font-size: clamp(50px, 8vw, 100px);
+            line-height: 1em;
+        }
+
+        .resume-btn-style {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: -60px;
+        }
+
+        .inner-Resume {
+            background-color: #FDB51B;
+            border-radius: 50%;
+            padding: 3.5% 1%;
+        }
+
+        .inner-Resume:hover {
+            background-color: #cc9215;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .summary-content {
+            padding: 5px 30px 0px 30px;
+            color: #161922;
+            text-align: justify;
+            font-size: clamp(12px, 3vw, 16px);
+        }
+
+        .summary-content a {
+            text-decoration: underline;
+            color: #010510;
+        }
+
+        .summary-heading {
+            color: #161922;
+            padding: 15px 30px 0px 10px;
+            font-size: 40px;
+        }
+
+        .about-button {
+            background-color: #FD6037;
+            margin: 20px 0px 20px 0px;
+            padding: 5px 60px;
+            border-radius: 50px;
+        }
+
+        .about-button:hover {
+            background-color: #b04429;
+        }
+
+        .image-summary {
+            font-size: 18px;
+            padding: 20px 30px 10px 15px;
+            color: white;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-content,
+        .about-img {
+            box-sizing: border-box;
+        }
+
+        .about-content {
+            align-items: center;
+            width: 50%;
+        }
+
+        .about-img {
+            filter: hue-rotate(60px);
+            width: 30%;
+        }
+
+        .img-2 {
+            filter: brightness(0.1);
+            filter: saturate(0) brightness(0.7);
+        }
+
+        .heading {
+            color: #FDB51B;
+            font-size: 50px;
+            text-align: center;
+            font-family: "Protest Strike", sans-serif;
+        }
+
+        .input-style {
+            margin: 10px 0px;
+            border: none;
+            border-radius: 2px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .sub-btn {
+            background-color: #FDB51B;
+            color: #F6EEE1;
+            border: none;
+            border-radius: 2px;
+            width: fit-content;
+            padding: 5px 10px;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+
+        .sub-btn:hover {
+            background-color: #cc9215;
+        }
+
+        .form-bg {
+            margin: 10px;
+            border-radius: 4px;
+            padding: 20px;
+            width: 40%;
+            background-color: #010510;
+        }
+
+        .scroller__inner {
+            padding-block: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .scroller__inner img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .scroller__inner img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .scroller[data-animated="true"] {
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg,
+                    transparent,
+                    white 20%,
+                    white 80%,
+                    transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+
+        .scroller[data-animated="true"] .scroller__inner {
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+        }
+
+        .scroller[data-direction="right"] {
+            --_animation-direction: reverse;
+        }
+
+        .scroller[data-direction="left"] {
+            --_animation-direction: forwards;
+        }
+
+        .scroller[data-speed="fast"] {
+            --_animation-duration: 20s;
+        }
+
+        .scroller[data-speed="slow"] {
+            --_animation-duration: 30s;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translate(calc(-50% - 0.5rem));
+            }
+        }
+
+        .tag-list {
+            margin: 0;
+            padding-inline: 0;
+            list-style: none;
+        }
+
+        .tag-list li {
+            color: #F6EEE1;
+            font-size: 35px;
+            padding: 0 2rem;
+            background-color: #010510;
+            border-radius: 0.5rem;
+        }
+
+        .tag-list li:hover {
+            background-color: #272a33;
+            cursor: pointer;
+        }
+
+        .skills {
+            background-color: #161922;
+            padding: 65px clamp(125px, 20vw, 355px);
+        }
+
+        .skill-container {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skill-container li {
+            list-style: none;
+            margin: 25px;
+            padding: 25px;
+            background-color: transparent;
+            border: 2px solid #39573c;
+            box-shadow: 3px 3px 10px -4px #609065;
+            text-align: center;
+            transition: all .4s ease 0s;
+        }
+
+        .skill-container li:hover {
+            border: 2px solid #527a55;
+            scale: 1.05;
+        }
+
+        .card-container .card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .card-container {
+            max-width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0px;
+            margin-inline: 15px;
+        }
+
+        .card {
+            min-width: 0px;
+            height: 100%;
+            border: 3px solid #161922;
+            box-shadow: 3px 3px 10px -4px #161922;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            flex-grow: 1;
+            cursor: pointer;
+            position: relative;
+            transition: flex-grow 2s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-timing: 0.5s;
+        }
+
+        .card:hover {
+            border: solid #272a33;
+            flex-grow: 7;
+        }
+
+        .card>.background {
+            position: absolute;
+            inset: 0;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.6);
+            z-index: 1;
+            transition: var(--transition-timing) ease;
+        }
+
+        .card:hover>.background {
+            filter: brightness(1);
+        }
+
+        .card>.card-content {
+            /* display: flex; */
+            align-items: center;
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 20px;
+            overflow: hidden;
+            transition: var(--transition-timing);
+            z-index: 1;
+        }
+
+        .card:hover>.card-content {
+            inset: 10px;
+            top: auto;
+            background-color: #161922;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .card-content>* {
+            transition: var(--transition-timing);
+        }
+
+        .card-content>.title {
+            margin-left: 10px;
+            translate: 0 100%;
+            opacity: 0;
+            color: #F6EEE1;
+            font-size: clamp(9px, 2vw, 20px);
+            font-weight: 800;
+        }
+
+        .card:hover .title {
+            opacity: 1;
+            translate: 0 0;
+        }
+
+        .card-content>.desc {
+            margin-left: 10px;
+            translate: 0 100%;
+            opacity: 0;
+            color: #F6EEE1;
+            font-size: clamp(7px, 2vw, 16px);
+        }
+
+        .card:hover .desc {
+            opacity: 1;
+            translate: 0 0;
+        }
+
+        .card>.backdrop {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100px;
+            z-index: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+        }
+
+        .cards {
+            margin: 0px clamp(20px, 5vw, 30px);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cards .card1 {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: 1000ms;
+        }
+
+        .cards .card1:hover {
+            transform: scale(1.02, 1.02);
+        }
+
+        .cards:hover>.card1:not(:hover) {
+            filter: blur(5px);
+            transform: scale(0.95, 0.95);
+        }
+
+        @keyframes animate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .container-cube {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 0;
+            margin-top: 150px;
+            margin-bottom: 315px;
+            transform: skewY(-20deg);
+            animation: animate 1s linear infinite;
+
+            .cube {
+                position: relative;
+                z-index: 2;
+
+                &:nth-child(2) {
+                    z-index: 1;
+                    translate: -60px -60px;
+                }
+
+                &:nth-child(3) {
+                    z-index: 3;
+                    translate: 60px 60px;
+                }
+
+                div {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    translate: calc(-70px * var(--x)) calc(-60px * var(--y));
+
+                    span {
+                        border: 1px solid black;
+                        position: relative;
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background: rgb(237, 235, 235);
+                        z-index: calc(1 * var(--i));
+                        transition: 1.5s;
+
+                        &:hover {
+                            transition: 0s;
+                            background: #ef4149;
+                            filter: drop-shadow(0 0 30px #ef4149);
+
+                            &:before,
+                            &:after {
+                                transition: 0s;
+                                background: #ef4149;
+                            }
+                        }
+
+                        &:before {
+                            border: 1px solid black;
+                            content: "";
+                            position: absolute;
+                            left: -40px;
+                            width: 40px;
+                            height: 100%;
+                            background: white;
+                            transform-origin: right;
+                            transform: skewY(45deg);
+                            transition: 1.5s;
+                        }
+
+                        &:after {
+                            border: 1px solid black;
+                            content: "";
+                            position: absolute;
+                            top: -40px;
+                            left: 0px;
+                            width: 100%;
+                            height: 40px;
+                            background: white;
+                            transform-origin: bottom;
+                            transform: skewX(45deg);
+                            transition: 1.5s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-cert {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        .container-cert .card-cert {
+            border-radius: 15px;
+            width: 23.5%;
+            padding: 10px;
+            background: #011522;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: 0.5s;
+        }
+
+        .card-cert:hover {
+            transform: scale(1.07, 1.07);
+        }
+
+        .container-cert .card-cert div img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .container-cert .card-cert .circles {
+            display: flex;
+            gap: 3px;
+        }
+
+        .c {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            box-shadow: inset 2px 2px 5px rgba(235, 235, 235, 0.356);
+        }
+
+        .c:first-child {
+            background-color: #ff605c;
+        }
+
+        .c:nth-child(2) {
+            background-color: #ffbd44;
+        }
+
+        .c:last-child {
+            background-color: #00ca4e;
+        }
+
+        .card-cert .search-bar {
+            margin: 5px;
+            text-align: center;
+            width: 100%;
+            border: 0.5px solid white;
+            border-radius: 5px;
+            color: white;
+            font-size: clamp(12px, 2vw, 16px);
+            box-shadow: inset 2px 2px 2px #05050525;
+        }
+        
+
+        @media only screen and (max-width: 380px) {
+            .container-cube {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 460px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+            .portfolio {
+                margin-top: 3em;
+            }
+
+            .portfolio span {
+                line-height: 1em;
+            }
+
+            .resume-btn-style {
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: -50px;
+            }
+
+            .inner-Resume {
+                background-color: #FDB51B;
+                border-radius: 50%;
+                padding: 9% 2%;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+            }
+
+            .about-img,
+            .about-content {
+                width: 100%;
+            }
+
+            .about-button {
+                margin: 20px 0px 20px 0px;
+            }
+
+            .img-2 {
+                display: block;
+            }
+
+            .heading {
+                color: #010510;
+                font-size: 33px;
+                text-align: center;
+                font-family: "Protest Strike", sans-serif;
+            }
+
+            .summary-heading {
+                font-size: 30px;
+            }
+
+            .input-style {
+                font-size: 14px;
+            }
+
+            .sub-btn {
+                font-size: 14px;
+            }
+
+            .form-bg {
+                width: 80%;
+            }
+
+            .tag-list li {
+                font-size: 25px;
+                padding: 0 1rem;
+                border-radius: 0.25rem;
+            }
+
+            .card-container {
+                height: 200px;
+            }
+
+            .skills {
+                padding: 65px 0px;
+            }
+
+            .skill-container li {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            .container-cert {
+                flex-direction: column;
+            }
+
+            .container-cert .card-cert {
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            .card-cert:hover {
+                transform: scale(1.05, 1.05);
+            }
+
+        }
+
+        @media only screen and (min-width: 460px) and (max-width: 920px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+            .resume-btn-style {
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: -65px;
+            }
+
+            .inner-Resume {
+                background-color: #FDB51B;
+                border-radius: 50%;
+                padding: 6% 2%;
+            }
+
+            .about-img,
+            .about-content {
+                width: 100%;
+            }
+
+            .about-button {
+                margin: 20px 0px 20px 0px;
+            }
+
+            .img-2 {
+                display: none;
+            }
+
+            .heading {
+                font-size: 50px;
+            }
+
+            .input-style {
+                font-size: 14px;
+            }
+
+            .sub-btn {
+                font-size: 14px;
+            }
+
+            .form-bg {
+                width: 60%;
+            }
+
+            .skills {
+                padding: 65px 150px;
+            }
+
+            .skill-container li {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .container-cert .card-cert {
+                margin: 10px;
+                width: 47%;
+            }
+
+            .card-cert:hover {
+                transform: scale(1.05, 1.05);
+            }
+        }
+
+        @media only screen and (min-width: 920px) and (max-width: 1024px) {
+            .container-cert .card-cert {
+                margin: 10px;
+                width: 47%;
+            }
+
+            .card-cert:hover {
+                transform: scale(1.05, 1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="Portfolio"></div>
+    <div class="container-1 d-flex">
+        <!-- <img class="background" src="MainWalll.JPG" alt=""> -->
+        <div class="portfolio port-design d-flex" style="flex-direction:column; padding: 50px 0px;">
+            <span>ROBOTISIST</span>
+            <span>DEVELOPER</span>
+            <span>DESIGNER</span>
+            <span>FreeLancer</span>
+        </div>
+    </div>
+
+    <div class="d-flex resume-btn-style">
+        <a class="inner-Resume" target="_blank" href="Resume.html">
+            <h3>Resume!</h3>
+        </a>
+    </div>
+    <div id="About"></div>
+    <div class="d-flex" style="background-color: #F6EEE1;">
+        <div style="margin: 60px 0;">
+            <div class="container" style="width: 100%;">
+                <div class="about-content">
+                    <div class="summary-heading">
+                        <h1 class="summary-heading"><b>Hey all! 👋🏻 <br> I'm Ahmed Younas</b></h1>
+                    </div>
+                    <div>
+                        <h1 id="heading" class="heading"></h1>
+                    </div>
+                    <div class="summary-content">
+                        <span>I'm a third-year Computer Science student at <a target="_blank"
+                                href="https://www.nu.edu.pk/">FAST NUCES</a>, with a strong passion for web
+                            development. With hands-on experience in HTML, CSS, JavaScript, C#, ASP.NET, MySQL, ReactJS,
+                            and NodeJS. I craft creative web applications. From dynamic front-end interfaces to powerful
+                            back-end systems, I bring ideas to life. Additionally, I've dived into C/C++ programming,
+                            using these languages to build efficient and high-performance codes. Beyond my web
+                            development
+                            skills, I have a keen interest in exploring diverse areas of technology. I find joy in
+                            delving into
+                            the worlds of robotics and circuit analysis, and I've even taken on freelance projects in
+                            electrical circuit and digital logic design on <a target="_blank"
+                                href="https://www.fiverr.com/ahmedyounasvlog?source=gig_page">FIVERR</a>. Let's shape
+                            the future of the web, robotics and digital world together.</span>
+                    </div>
+                    <div class="d-flex">
+                        <a class="about-button" target="_blank"
+                            href="https://www.linkedin.com/in/ahmed-younas-360b481a5"><i class="fa fa-search"></i>
+                            LinkedIn Profile Link</a>
+                    </div>
+                </div>
+                <div class="about-img" style="background-color:#161922;">
+                    <img class="img-2" style="width: 100%;" src="Ahmed-11.png" alt="">
+                    <div class="image-summary">
+                        <span><i class="fa fa-home"></i> Lahore, Pakistan <br> <a href="tel:03125824019"><i
+                                    class="fa fa-phone"></i> +923125824019</a> <br> <a
+                                href="mailto:ayds13579@gmail.com"><i class="fa fa-envelope">
+                                    ayds13579@gmail.com</i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Skills"></div>
+    <div class="skills">
+        <div class="d-flex" style="color: #FDB51B;">
+            <h1><b>Skills & Expertise</b></h1>
+        </div>
+        <div class="skill-container">
+            <li><img src="c++.png" alt=""></li>
+            <li><img src="python.png" alt=""></li>
+            <li><img src="html.png" alt=""></li>
+            <li><img src="css.png" alt=""></li>
+            <li><img src="js.png" alt=""></li>
+            <li><img src="figma.png" alt=""></li>
+            <li><img src="react.png" alt=""></li>
+            <li><img src="mongo.png" alt=""></li>
+            <li><img src="node.png" alt=""></li>
+            <li><img src="bootstrap.png" alt=""></li>
+            <li><img src="asp.png" alt=""></li>
+            <li><img src="csharp.png" alt=""></li>
+            <li><img src="sql.png" alt=""></li>
+            <li><img src="circuits.png" alt=""></li>
+            <li><img src="solidworks.png" alt=""></li>
+            <li><img src="autocad.png" alt=""></li>
+            <li><img src="ms.png" alt=""></li>
+            <li><img src="linux.png" alt=""></li>
+            <li><img src="vscode.png" alt=""></li>
+            <li><img src="cisco.png" alt=""></li>
+        </div>
+    </div>
+
+    <div id="Projects"></div>
+    <div style="background-color: #F6EEE1; padding: 65px 0px;">
+        <div class="d-flex" style="color: #161922;">
+            <h1><b>Projects</b></h1>
+        </div>
+        <div class="cards">
+            <div class="card1 red">
+                <div class="card-container">
+                    <div class="card">
+                        <img class="background" src="wordInfo.png" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Word Info - Text Manipulation Application</h3>
+                            <p class="desc">A word manipulation website that offers features such as converting text
+                                between
+                                uppercase and lowercase, providing word and character counts, and estimating the time to
+                                read a
+                                given paragraph in real-time. (Special: Dark Mode)</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="calculator.png" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Calculator App</h3>
+                            <p class="desc">An Online Calculator App that offers features such as addition, subtraction,
+                                division, manipulation and squaring using ReactJs, JS and Css.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="newsapp.png" alt="">
+                        <div class="card-content">
+                            <h3 class="title">News Application - API</h3>
+                            <p class="desc">An Online News App which provides the current online news
+                                about the world affairs using ReactJs, JS and Bootstrap. It is a real-time news app.
+                                (Special: Dark Mode)</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="Pharmacy.png" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Pharmacy Management System</h3>
+                            <p class="desc">A Pharmacy Management System that aimed to optimize various
+                                aspects of pharmacy operations, including inventory management, prescription
+                                tracking, and employees and customer information using .NET Frameworks and C#.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-container">
+                    <div class="card">
+                        <img class="background" src="bee maze.png" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Bee in the Maze</h3>
+                            <p class="desc">An Assembly Language based project in which a bee move from
+                                one starting point to end point from a maze by right, left, up and down keys from
+                                keyboard using subroutines, keyboard interrupts, video memory and hardware
+                                interrupts.
+                            </p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="casino.jpg" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Casino Royal - Number Guessing Game</h3>
+                            <p class="desc">A Programming Fundamentals based project in which a player
+                                is tasked with guessing a randomly selected number within a specified range and if
+                                guess the right number got 10x of his betting money else he lose the betting price. At
+                                the
+                                end
+                                money transferred to his/her account cutting 5% tax.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="music.jpg" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Music & Movie Library</h3>
+                            <p class="desc">An Object Oriented Programming project that enables
+                                developers to design, implement, and interact with a robust software solution for
+                                organizing,
+                                cataloging, and managing an extensive collection of music tracks and movie titles.
+                            </p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="favpanda.PNG" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Fav Panda - Food Delivering Application</h3>
+                            <p class="desc">A Data Structures based project which provides a seamless
+                                and efficient platform for users to order, and receive their favorite food items from a
+                                wide range of restaurants using Graph and File handling.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-container">
+                    <div class="card">
+                        <img class="background" src="lightseeking.jpg" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Light Seeking Robot</h3>
+                            <p class="desc">Circuit Analysis based Light Seeking Robot, moves when
+                                sense light using LDR (light sensor). It moves right and left according to the direction
+                                and capacity of light.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="linerobot.jpg" alt="">
+                        <div class="card-content">
+                            <h3 class="title">Line Following & Hurdle Detecting Robot</h3>
+                            <p class="desc">The robot crafted using LEGO Mindstorms components and advanced programming
+                                techniques.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="MCU.PNG" alt="">
+                        <div class="card-content">
+                            <h3 class="title">6-bit Mini-Computational Unit</h3>
+                            <p class="desc">Digital logic design based project based on registers,
+                                multiplexers, decoders and other logic gates performing arithmetic, shift and
+                                transfer of bits operations.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="beautySaloon.png" alt="">
+                        <div class="card-content">
+                            <h3 class="title">6-bit Beauty Saloon</h3>
+                            <p class="desc">A 6-bit logical design of a beauty saloon where we select a service and pay
+                                for it
+                                if there is amount extra from what required it returns the remaining amount else it asks
+                                for
+                                more and when satisfied store it in a bank by adding it to previous amount.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+
+                    <div class="card">
+                        <img class="background" src="universaljoint.jpeg" alt="">
+                        <div class="card-content">
+                            <h3 class="title">3D Universal Joint</h3>
+                            <p class="desc">3D Model of a Universal Joint created using SolidWorks and AutoCad as a
+                                university
+                                project.</p>
+                        </div>
+                        <div class="backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-cube">
+        <div class="cube">
+            <div style="--x:-1; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+            <div style="--x:0; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+            <div style="--x:1; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+        </div>
+        <div class="cube">
+            <div style="--x:-1; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+            <div style="--x:0; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+            <div style="--x:1; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+        </div>
+        <div class="cube">
+            <div style="--x:-1; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+            <div style="--x:0; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+            <div style="--x:1; --y:0;">
+                <span style="--i:3;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:1;"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="Certificates"></div>
+    <div style="background-color: #F6EEE1; padding: 65px 0;">
+        <div class="d-flex" style="color: #161922;">
+            <h1><b>Certificates</b></h1>
+        </div>
+        <div class="container-cert">
+            <div class="card-cert">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 5px;">
+                    <div class="circles">
+                        <div class="c"></div>
+                        <div class="c"></div>
+                        <div class="c"></div>
+                    </div>
+                    <div class="search-bar">Web development Virtual Internship</div>
+                </div>
+
+                <div>
+                    <img src="codsoft.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="card-cert">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 5px;">
+                    <div class="circles">
+                        <div class="c"></div>
+                        <div class="c"></div>
+                        <div class="c"></div>
+                    </div>
+                    <div class="search-bar">Participation in Web Marathon</div>
+                </div>
+
+                <div>
+                    <img src="noimg.png" alt="">
+                </div>
+            </div>
+
+            <div class="card-cert">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 5px;">
+                    <div class="circles">
+                        <div class="c"></div>
+                        <div class="c"></div>
+                        <div class="c"></div>
+                    </div>
+                    <div class="search-bar">Basic of HTML & CSS</div>
+                </div>
+
+                <div>
+                    <img src="htmlcss.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="card-cert">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 5px;">
+                    <div class="circles">
+                        <div class="c"></div>
+                        <div class="c"></div>
+                        <div class="c"></div>
+                    </div>
+                    <div class="search-bar">Basic of JavaScript Programming</div>
+                </div>
+
+                <div>
+                    <img src="js.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact"></div>
+    <div class="d-flex" style="padding: 65px 0; flex-direction: column; align-items: center;">
+        <div style="color: #FDB51B;">
+            <h1><b>Contact me</b></h1>
+        </div>
+        <div class="form-bg">
+            <form class="d-flex" style="flex-direction: column;" action="">
+                <label style="color:#F6EEE1;" for="email">Email: </label>
+                <input class="input-style" type="email" name="email" id="msg" required>
+                <label style="color:#F6EEE1;" for="Message">Message: </label>
+                <textarea name="msg" id="msg" rows="3" autocomplete="off" required></textarea>
+                <button class="sub-btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <hr style="color: #F6EEE1;">
+
+    <footer style="text-align: center; color: #F6EEE1;">
+        <h6>Made by Ahmed Younas with <b style="color: #b04429;">❤</b></h6>
+    </footer>
+
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark content">
+        <div class="container-fluid">
+            <a class="navbar-brand Active" href="#">𝔄𝔥𝔪𝔢𝔡 𝔜𝔬𝔲𝔫𝔞𝔰</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "180px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        // typewriter animation
+        let title = document.getElementById('heading');
+        let name = ["CS Junior", "Free-lancer", "Web Developer", "Robotic Engineer", "Circuit Designer"];
+        let index = 0;
+        let x = 0;
+
+        const typeWriter = (n) => {
+            let new_title = n[x].slice(0, index);
+            title.innerText = 'I\'m ' + new_title;
+            if (index > n[x].length) {
+                index = 1
+                x++;
+            }
+            else {
+                index++;
+            }
+            if (x > 4) {
+                x = 0;
+            }
+            setTimeout(() => typeWriter(n), 250);
+        }
+        typeWriter(name);
+
+        //infinity scroll
+        const scrollers = document.querySelectorAll(".scroller");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute("data-animated", true);
+                const scrollerInner = scroller.querySelector(".scroller__inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+
+        window.addEventListener('scroll', function () {
+            var element = document.getElementById('nav');
+            var scrollPosition = window.scrollY;
+            var screenWidth = window.innerWidth;
+
+            if (screenWidth >= 768) {
+                if (scrollPosition > 550) {
+                    element.style.backgroundColor = 'rgba(22, 25, 34, 0.8)';
+                    element.style.backdropFilter = 'blur(10px)';
+                    element.style.transitionDuration = '0.4s';
+                } else {
+                    element.style.backgroundColor = 'transparent';
+                    element.style.backdropFilter = 'blur(10px)';
+                    element.style.transitionDuration = '0.4s';
+                }
+            } else {
+                if (scrollPosition > 350) {
+                    element.style.backgroundColor = 'rgba(22, 25, 34, 0.8)';
+                    element.style.backdropFilter = 'blur(10px)';
+                    element.style.transitionDuration = '0.4s';
+                } else {
+                    element.style.backgroundColor = 'transparent';
+                    element.style.backdropFilter = 'blur(10px)';
+                    element.style.transitionDuration = '0.4s';
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
